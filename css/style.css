@@ -1,0 +1,820 @@
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    cursor: default;
+    background: #EDF6FF;
+}
+
+a {
+    text-decoration: none;
+    color: #097688;
+}
+
+a:hover {
+    color: #A74329;
+}
+
+.scroll_Up_Arrow {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    background: url('../images/arrow_up.png') no-repeat;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.title_page {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #EDF6FF;
+    align-items: center;
+}
+
+.title_page__header {
+    padding: 0px 32px;
+    width: 100%;
+    justify-content: space-between;
+    margin: 25px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu {
+    width: 61%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+}
+
+/* .menu img {
+    margin-left: 50px;
+} */
+
+.header__logo {
+    width: 75px;
+}
+
+/* 
+.place {
+    margin-top: -55px;
+}
+
+.time {
+    margin-top: -55px;
+}
+
+.phone {
+    margin-top: -55px;
+} */
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 23%;
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+}
+
+.list__link {
+    display: inline-block;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #097688;
+    /* margin-bottom: 50px; */
+}
+
+.burger {
+    display: none;
+}
+
+.list__link.icon {
+    margin-left: 10px;
+}
+
+.list__link.icon:hover {
+    color: #097688;
+    cursor: default;
+}
+
+.list__link:hover {
+    color: #A74329;
+    cursor: pointer;
+}
+
+.linkPlace {
+    margin-right: 55px;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #097688;
+    margin-bottom: 50px;
+}
+
+.linkTime {
+    margin-right: 55px;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #097688;
+    margin-bottom: 50px;
+}
+
+.linkPhone {
+    margin-right: 55px;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #097688;
+    margin-bottom: 50px;
+}
+
+
+
+
+.content {
+    width: 100%;
+    background-image: url(../images/Horse.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+}
+
+.title_page__title {
+    margin-top: 30%;
+    font-size: 96px;
+    margin-left: 5%;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 100%;
+    color: #A74329;
+    font-family: "Montserrat";
+    height: 187px;
+    max-width: 100px;
+    margin-bottom: 200px;
+}
+
+/*  ------------ О НАС ----------  */
+
+.about_page {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #EDF6FF;
+    align-items: center;
+}
+
+.about_page__title {
+    margin-top: 50px;
+    font-size: 96px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 66px;
+    color: #A74329;
+    font-family: "Montserrat";
+    height: 187px;
+    max-width: 500px;
+}
+
+.about_page__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.content__text {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 36px;
+    width: 60%;
+    color: #097688;
+}
+
+.text__sentence {
+    margin-bottom: 10px;
+}
+
+.sentence__title {
+    color: #A74329;
+}
+
+.sentence__text {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+
+}
+
+.about_page__image {
+    max-width: 607px;
+    width: 32%;
+}
+
+/*  ------------ ПРЕДЛОЖЕНИЯ ----------  */
+
+.offerPage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #EDF6FF;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.offerPage__title {
+    text-align: center;
+    margin-top: 200px;
+    font-size: 96px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 66px;
+    color: #A74329;
+    font-family: "Montserrat";
+    height: 187px;
+}
+
+.offerPage__content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content__block {
+    width: 569px;
+    height: 870px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 27px;
+    border-radius: 40px;
+    border: 3px;
+    box-shadow: inset 1px 1px 10px rgba(72, 183, 238, 0.5), inset -1px -1px 10px rgba(72, 183, 238, 0.5), inset -1px 1px 10px rgba(72, 183, 238, 0.5), inset 1px -1px 10px rgba(72, 183, 238, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+.block__image {
+    text-align: center;
+}
+
+
+.block__title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 518px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 36px;
+    max-width: 374px;
+    color: #A74329;
+    text-align: center;
+}
+
+
+.block__text {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 30px;
+    max-width: 374px;
+    color: #097688;
+    text-align: left;
+}
+
+.success_button {
+    margin-top: 50px;
+    background: none;
+    color: #097688;
+    border: 3px solid #097688;
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    line-height: 52px;
+    font-weight: 700;
+    border-radius: 46px;
+    padding: 0 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.success_button:hover {
+    cursor: pointer;
+    background: none;
+    color: #A74329;
+    border: 3px solid #A74329;
+    transition: all 0.3s ease-out;
+    box-shadow: 0px 3px 0px #56585a;
+}
+
+.offerPage2 {
+    width: 100%;
+    margin-top: 150px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #EDF6FF;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.offerPage2.hidden {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #EDF6FF;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.animatefeedbacks {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.offerPage2.hidden {
+    height: 0;
+    display: none;
+    overflow: hidden;
+}
+
+.loaded.animatefeedbacks {
+    transition: opacity 0.1s ease-out 0.5s;
+    transform: 0.1s ease-out 0.5s;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.animatebutton {
+    transition: transform 0.8s ease-out 0.5s;
+    transform: translateY(0px);
+}
+
+.animatebutton2 {
+    transition: transform 0.8s ease-out 0.2s;
+    transform: translateY(0px);
+}
+
+/*  ------------ ИППОТЕРАПИЯ ----------  */
+
+
+
+.TherapyPage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #EDF6FF;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TherapyPage__content {
+    height: auto;
+    display: flex;
+    background: #EDF6FF;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.TherapyPage__title {
+    margin-top: 150px;
+    text-align: center;
+    font-size: 76px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 66px;
+    color: #A74329;
+    font-family: "Montserrat";
+    height: 187px;
+    line-height:100%;
+}
+
+.TherapyContent__text {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 30px;
+    max-width: 1074px;
+    color: #097688;
+    text-align: left;
+}
+
+.TherapyContent__list {
+    margin-top: 50px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 30px;
+    max-width: 1074px;
+    color: #097688;
+    text-align: left;
+}
+
+.TherapyPage__image {
+    text-align: center;
+}
+
+.TherapyPage2 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #EDF6FF;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TherapyPage2.hidden {
+    height: 0;
+    display: none;
+    overflow: hidden;
+}
+
+.animateTherapy {
+    /* opacity: 0; */
+    transform: translateY(40px);
+}
+
+.loaded2.animateTherapy {
+    transition: opacity 0.1s ease-out 0.5s;
+    transform: 0.1s ease-out 0.5s;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.animatebutton {
+    transition: transform 0.8s ease-out 0.5s;
+    transform: translateY(0px);
+}
+
+.animatebutton2 {
+    transition: transform 0.8s ease-out 0.2s;
+    transform: translateY(0px);
+}
+
+
+
+
+/*  ------------ ОТЗЫВЫ ----------  */
+
+.reviewsPage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #EDF6FF;
+    align-items: center;
+}
+
+.reviewsPage__title {
+    font-size: 96px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 66px;
+    color: #A74329;
+    font-family: "Montserrat";
+    height: 187px;
+    margin-top: 150px;
+    margin-bottom: 0px;
+}
+
+.reviewsPage__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  ------------ ГЕОЛОКАЦИЯ ----------  */
+
+.geo_page {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #EDF6FF;
+    align-items: center;
+}
+
+.geo_page__title {
+    text-align: center;
+    font-size: 96px;
+    font-weight: 700; 
+    letter-spacing: 3px;
+    line-height: 66px;
+    color: #A74329;
+    font-family: "Montserrat";
+    height: 187px;
+    margin-top: 150px;
+}
+
+.geo_page__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.geo_page__text {
+    background: white;
+    border-radius: 40px;
+    padding: 20px;
+    border: 3px;
+    box-shadow: inset 1px 1px 2px rgba(72, 183, 238, 0.5), inset -1px -1px 2px rgba(72, 183, 238, 0.5), inset -1px 1px 2px rgba(72, 183, 238, 0.5), inset 1px -1px 2px rgba(72, 183, 238, 0.5);
+    display: flex;
+    width: 691px;
+    height: 470px;
+}
+
+.text__list {
+    display: inline-block;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    color: #097688;
+    margin-bottom: 50px;
+}
+
+.content__map {
+
+    margin-left: 10px;
+    display: flex;
+}
+
+
+
+
+
+
+/*  ------------ ЦЕНЫ ----------  */
+
+.price_page {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #EDF6FF;
+    align-items: center;
+}
+
+.price_page__title {
+    text-align: center;
+    font-size: 96px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 66px;
+    color: #A74329;
+    font-family: "Montserrat";
+    height: 187px;
+    margin-top: 150px;
+    margin-bottom: 0px;
+}
+
+.price_page__pr_content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    background: #EDF6FF;
+}
+
+.content__pr_context {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #EDF6FF;
+    align-items: center;
+}
+
+.context__block {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.block__context {
+    width: 800px;
+    max-width: 100%;
+    height: 139px;
+    margin-left: 20px;
+    padding: 20px;
+    display: inline-flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    border-radius: 40px;
+    border: 3px;
+    box-shadow: inset 1px 1px 10px rgba(72, 183, 238, 0.5), inset -1px -1px 10px rgba(72, 183, 238, 0.5), inset -1px 1px 10px rgba(72, 183, 238, 0.5), inset 1px -1px 10px rgba(72, 183, 238, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+.bl_context__title {
+    display: flex;
+    max-width: 586px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #A74329;
+    font-family: "Montserrat";
+}
+
+.bl_context__text { 
+    display: flex;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 30px;
+    color: #097688;
+}
+
+.content__image {
+    object-fit: contain; 
+    object-position: right; 
+}
+
+/* @media screen and (max-width: 1920px) {
+    .content {
+        max-width: 1920px;
+    }
+
+    .about_page-image {
+        width: 50%;
+        height: 50%;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+} */
+
+
+@media screen and (max-width: 1650px) {
+    .list__link {
+        font-size: 25px;
+    }
+
+    .content__block {
+        width: 469px;
+    }
+
+    .text__list {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 1570px) {
+    .list__link {
+        margin-left: 10px;
+        font-size: 23px;
+    }
+
+    .menu__link.icon {
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .list__link {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .about_page__text {
+        flex-shrink: 1;
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 30px;
+        max-width: 1178px;
+        color: #097688;
+        letter-spacing: 0px;
+    }
+
+    .text__sentence {
+        margin-bottom: 10px;
+    }
+
+    .sentence__title {
+        font-weight: 500;
+        color: #A74329;
+    }
+
+    .sentence__text {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 37px;
+
+    }
+
+    .about_page__image {
+        margin-bottom: 50px;
+        text-align: center;
+        flex-shrink: 3;
+    }
+
+    .content {
+        background-image: url(../images/Horse.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
+    }
+
+    .title_page__title {
+        margin-top: 30%;
+        font-size: 56px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        line-height: 100%;
+        color: #A74329;
+        font-family: "Montserrat";
+        height: 187px;
+        max-width: 100px;
+        margin-bottom: 200px;
+    }
+
+    .content__block {
+        width: 400px;
+        height: 670px;
+    }
+
+    .block__title {
+        font-weight: 600;
+        font-size: 30px;
+    }
+    
+    
+    .block__text {
+        font-weight: 400;
+        font-size: 25px;
+    }
+
+    .block__image {
+        width: 300px;
+    }
+
+    .logo__icon {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .list__link {
+        margin-left: 10px;
+        font-size: 18px;
+        text-wrap: nowrap;
+    }
+
+    .menu__link.icon {
+        margin-left: 2px;
+    }
+
+    .header__logo {
+        width: 10%;
+    }
+
+    .place {
+        width: 15%;
+    }
+    
+    .time {
+        width: 15%;
+    }
+    
+    .phone {
+        width: 15%;
+    }
+}
