@@ -42,30 +42,30 @@ function scrollToTop() {
     document.documentElement.scrollTop = 0;
 }
 
-var button = document.getElementById('showAllFeedbacks');
-button.addEventListener('click', showAllFeedbacks);
-var show = new Boolean(true);
-allfeedbacks = document.getElementById('hiddenFeedbacks');
+// var button = document.getElementById('showAllFeedbacks');
+// button.addEventListener('click', showAllFeedbacks);
+// var show = new Boolean(true);
+// allfeedbacks = document.getElementById('hiddenFeedbacks');
 
-function showAllFeedbacks() {
-    if (show) {
-        button.classList.add('animatebutton');
-        allfeedbacks.classList.remove('hidden');
-        allfeedbacks.classList.add('loaded');
-        button.innerText = 'СВЕРНУТЬ';
-        show = false;
-    }
+// function showAllFeedbacks() {
+//     if (show) {
+//         button.classList.add('animatebutton');
+//         allfeedbacks.classList.remove('hidden');
+//         allfeedbacks.classList.add('loaded');
+//         button.innerText = 'СВЕРНУТЬ';
+//         show = false;
+//     }
 
-    else {
-        allfeedbacks.classList.add('hidden');
-        button.classList.remove('animatebutton');
-        allfeedbacks.classList.remove('loaded');
+//     else {
+//         allfeedbacks.classList.add('hidden');
+//         button.classList.remove('animatebutton');
+//         allfeedbacks.classList.remove('loaded');
 
-        button.innerText = 'ВСЕ УСЛУГИ';
-        show = true;
-    }
+//         button.innerText = 'ВСЕ ПРЕДЛОЖЕНИЯ';
+//         show = true;
+//     }
 
-}
+// }
 
 
 var button2 = document.getElementById('showAllTherapy');
@@ -125,9 +125,50 @@ function onSubmitForm() {
     
 }
 
-
-
-
-
-
-
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+  
+    // Функция показа слайда
+    function showSlide(index) {
+      // Скрываем активный слайд
+      document.querySelector('.slide.active').classList.remove('active');
+      document.querySelector('.dot.active').classList.remove('active');
+      
+      // Обновляем индекс
+      currentIndex = (index + slides.length) % slides.length;
+      
+      // Показываем новый слайд
+      slides[currentIndex].classList.add('active');
+      dots[currentIndex].classList.add('active');
+    }
+  
+    // Обработчики событий
+    prevBtn.addEventListener('click', () => {
+      showSlide(currentIndex - 1);
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      showSlide(currentIndex + 1);
+    });
+    
+    // Клик по точкам
+    dots.forEach(dot => {
+      dot.addEventListener('click', function() {
+        showSlide(parseInt(this.getAttribute('data-index')));
+      });
+    });
+    
+    // Автопереключение слайдов
+    const interval = setInterval(() => {
+      showSlide(currentIndex + 1);
+    }, 5000);
+    
+    // Остановка автопереключения при наведении
+    document.querySelector('.slider').addEventListener('mouseenter', () => {
+      clearInterval(interval);
+    });
+  });
