@@ -100,39 +100,37 @@
 
 
 
-        <div id="#offer" class="offerPage">
+        <div id="offer" class="offerPage">
             <div class="offerPage__title">МЫ ПРЕДЛАГАЕМ</div>
-            <div class="offerPage__content ">
-                <div class="content__block block">
-                    <img class="block__image" src="./images/OfferImage1.png" alt="offer">
-                    <div class="block__title">КРАСОЧНЫЕ ЛОКАЦИИ</div>
-                    <div class="block__text">Откройте для себя несколько живописных маршрутов, которые ведут
-                        через
-                        лиственный лес. Они протянулись вдоль полей и окружают чистое озеро.
+            <div class="slider">
+                <div class="slider-container">
+                    <div class="slide active">
+                        <img class="block__image" src="./images/OfferImage1.png" alt="offer">
+                        <div class="block__title">КРАСОЧНЫЕ ЛОКАЦИИ</div>
+                        <div class="block__text">Откройте для себя несколько живописных маршрутов, которые ведут
+                            через
+                            лиственный лес. Они протянулись вдоль полей и окружают чистое озеро.
+                        </div>
                     </div>
-                </div>
 
-                <div class="content__block block">
-                    <img class="block__image" src="./images/OfferImage2.png" alt="Offer">
-                    <div class="block__title">ФОТОСЕССИЯ С ЛОШАДЬМИ</div>
-                    <div class="block__text">У вас есть возможность провести незабываемую фотосессию с
-                        грациозными
-                        лошадьми. Отличный способ запечатлеть яркие моменты.
+                    <div class="slide">
+                        <img class="block__image" src="./images/OfferImage2.png" alt="Offer">
+                        <div class="block__title">ФОТОСЕССИЯ С ЛОШАДЬМИ</div>
+                        <div class="block__text">У вас есть возможность провести незабываемую фотосессию с
+                            грациозными
+                            лошадьми. Отличный способ запечатлеть яркие моменты.
+                        </div>
                     </div>
-                </div>
 
-                <div class="content__block block">
-                    <img class="block__image" src="./images/OfferImage3.png" alt="">
-                    <div class="block__title">ЖИВОЕ ОБЩЕНИЕ С ЖИВОТНЫМИ</div>
-                    <div class="block__text">Погрузитесь в мир животных, общаясь с дружелюбными лошадками и
-                        осликом. Это принесет вам массу положительных эмоций.
+                    <div class="slide">
+                        <img class="block__image" src="./images/OfferImage3.png" alt="">
+                        <div class="block__title">ЖИВОЕ ОБЩЕНИЕ С ЖИВОТНЫМИ</div>
+                        <div class="block__text">Погрузитесь в мир животных, общаясь с дружелюбными лошадками и
+                            осликом. Это принесет вам массу положительных эмоций.
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="offerPage2 hidden animatefeedbacks" id="hiddenFeedbacks">
-                <div class="offerPage__content OfferContent">
-                    <div class="content__block block">
+                    <div class="slide">
                         <img class="block__image" src="./images/OfferImage4.png" alt="">
                         <div class="block__title">УРОКИ ВЕРХОВОЙ ЕЗДЫ</div>
                         <div class="block__text">Получите уникальный опыт, записавшись на уроки верховой езды,
@@ -140,7 +138,8 @@
                             проводятся под руководством опытных инструкторов.
                         </div>
                     </div>
-                    <div class="content__block block">
+
+                    <div class="slide">
                         <img class="block__image" src="./images/OfferImage5.png" alt="">
                         <div class="block__title">УГОЩЕНИЯ И ПРИЯТНАЯ КОМПАНИЯ</div>
                         <div class="block__text">После активного дня вам предложат горячий чай и вкусные
@@ -150,9 +149,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="slider__buttons">
+                    <button class="slider-btn prev">&#10094;</button>
+                    <button class="slider-btn next">&#10095;</button>
+                </div>
+                <div class="dots-container">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                    <span class="dot" data-index="4"></span>
+                </div>
             </div>
-
-            <button class="success_button" id="showAllFeedbacks">ВСЕ УСЛУГИ</button>
         </div>
 
 
@@ -228,15 +236,37 @@
 
         <div id="reviews" class="reviewsPage page">
             <div class="reviewsPage__title">ОТЗЫВЫ</div>
-            <div class="reviewsPage__content">
-                <div style="width:700px;height:890px;overflow:hidden;position:relative;box-shadow: 1px 1px 30px rgba(72, 183, 238, 0.2), -1px -1px 30px rgba(72, 183, 238, 0.2);
-                backdrop-filter: blur(10px);"><iframe
-                        style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box"
-                        src="https://yandex.ru/maps-reviews-widget/13513548577?comments"></iframe><a
-                        href="https://yandex.ru/maps/org/klub_konnykh_progulok/13513548577/" target="_blank"
-                        style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Клуб
-                        конных прогулок на карте Республики Марий Эл — Яндекс Карты</a></div>
+
+
+            <div style="display: flex; width: 100%; justify-content: center;margin-top: 20px;border-radius: 20px;">
+                <iframe
+                    style="width: 100%; height: 100%; max-width: 1170px; border: none; outline: none; padding: 0; margin: 0"
+                    id="myReviews__block-widget">
+                </iframe>
             </div>
+
+            <script src="https://myreviews.dev/widget/dist/index.js" defer></script>
+            <script>
+                (function () {
+                    var myReviewsInit = function () {
+                        new window.myReviews.BlockWidget({
+                            uuid: "91f1cf6a-27d2-4429-a73d-4e1343af7d00",
+                            name: "g5226624",
+                            additionalFrame: "none",
+                            lang: "ru",
+                            widgetId: "1"
+                        }).init();
+
+                    };
+                    if (document.readyState === "loading") {
+                        document.addEventListener('DOMContentLoaded', function () {
+                            myReviewsInit()
+                        })
+                    } else {
+                        myReviewsInit()
+                    }
+                })()
+            </script>
         </div>
 
 
@@ -332,7 +362,9 @@
                         <input id="form__name" class="forms__form" name="name" type="text" placeholder="ФИО" required>
                         <input id="form__email" class="forms__form" name="email" type="email" placeholder="E-mail"
                             required>
-                        <input class="forms__form" name="phone" type="tel" placeholder="Телефон" required>
+                        <label for="input" class="form__label">Телефон</label>
+                        <input class="forms__form" name="phone" type="tel" placeholder="+1-234-567-8901"
+                            pattern="\+\d-\d{3}-\d{3}-\d{4}" required>
                         <select class="forms__form form-select" name="list" id="" required>
                             <option class="forms__form">-- Вид Услуги --</option>
                             <option class="forms__form">Прогулка на лошадях</option>
@@ -344,8 +376,7 @@
                         <input class="forms__form" type="date" required>
 
                         <div class="form__title">Примечание</div>
-                        <textarea class="forms__form form-note" required>
-                        </textarea>
+                        <textarea class="forms__form form-note" required></textarea>
 
 
                         <button class="forms__button" onclick="onSubmitForm()">Отправить</button>
@@ -367,10 +398,10 @@
 
             <div class="f_content__block block">
                 <div class="f_block__title">Фотосессии</div>
-                <div class="f_block__text"><a href="#photo">Фотосессия с лошадьми</a></div>
+                <div class="f_block__text text-item"><a href="#photo">Фотосессия с лошадьми</a></div>
                 <div class="footer__logotip logotip">
                     <div class="logotip__logo logo"><img class="logo-item" src="./images/icon.png" alt="icon"></div>
-                    <div class="logotip__title">КОННЫЕ ПРОГУЛКИ</div>
+                    <div class="logotip__title"><a href="#title">КОННЫЕ ПРОГУЛКИ</a></div>
                 </div>
             </div>
 
@@ -378,22 +409,24 @@
                 <div class="f_block__title">Навигация</div>
                 <div class="f_block__text"><a href="#title">Главная</a> <br>
                     <a href="#about">О нас</a> <br>
-                    <a href="#about">Список услуг</a> <br>
+                    <a href="#offer">Предложения</a> <br>
                     <a href="#TherapyPage">Иппотерапия</a> <br>
-                    <a href="#services">Услуги</a>
+                    <a href="#services">Список Услуг</a>
                 </div>
             </div>
 
             <div class="f_content__block block">
                 <div class="f_block__title">Контакты</div>
-                <div class="f_block__text">+7(902) 735‒44‒18 <br>
-                    +7(906) 139‒85‒02 <br>
-                    example@gmail.com <br>
+                <div class="f_block__text">+7(902) 735‒44‒18<br>
+                    +7(906) 139‒85‒02<br>
+                    gremlox85@mail.ru<br>
                     д. Малые Люльпаны<br>
                     ул. Лесная, 10</div>
             </div>
-
-            <div class="f_content__social_media"><img src="./images/social.png" alt=""></div>
+            <div class="f_content__social_media"><a href="https://vk.com/id838689215?ysclid=mae3704lj350411462"><img style="width: 100%;" src="./images/VK.png" alt=""></a>
+                <a href=""><img style="width: 100%; min-width: 30px;" src="./images/WhatsApp.png" alt=""></a>
+                <a href=""><img style="width: 100%;" src="./images/TG.png" alt=""></a>
+            </div>
         </div>
     </footer>
 
